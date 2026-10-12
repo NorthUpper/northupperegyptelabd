@@ -8,6 +8,160 @@
 @media(max-width:1050px){.nav{gap:12px}.brand{min-width:235px}.navlinks{gap:12px;font-size:12px}.nav-cta{padding:10px 12px;font-size:12px}.project-grid{grid-template-columns:repeat(2,1fr)}.leaders{grid-template-columns:1fr 1fr}}
 @media(max-width:780px){.topline .container{justify-content:center}.nav{min-height:72px;justify-content:space-between}.brand{min-width:0}.brand img{width:47px;height:47px}.brand strong{font-size:12px}.brand small{font-size:10px}.mobile-toggle{display:block}.nav-cta{display:none}.navlinks{display:none;position:absolute;top:72px;right:0;left:0;background:white;border-bottom:1px solid var(--line);padding:15px 5%;flex-direction:column;align-items:stretch;gap:3px;box-shadow:var(--shadow)}.navlinks.show{display:flex}.navlinks a{padding:10px 0;border-bottom:1px solid #f0f2f5}.hero{min-height:520px}.hero-inner{padding:62px 0}.hero p{font-size:15px}.trust-grid{grid-template-columns:1fr}.trust-item{border-left:0;border-bottom:1px solid var(--line);padding:15px 4px}.trust-item:last-child{border-bottom:0}.section{padding:55px 0}.section-head{align-items:flex-start;flex-direction:column}.audience-grid{grid-template-columns:1fr}.capability-grid{grid-template-columns:1fr}.capability-visual{min-height:290px;order:2}.leaders{grid-template-columns:1fr}.contact-band{padding:28px;align-items:flex-start;flex-direction:column}.footer-main{grid-template-columns:1fr;gap:25px}}
 @media(max-width:520px){.project-grid{grid-template-columns:1fr}.project-toolbar{align-items:stretch}.search{min-width:100%}.chips{overflow:auto;flex-wrap:nowrap;padding-bottom:4px}.chip{white-space:nowrap}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero-actions .btn{width:100%}.hero-note{gap:10px;flex-direction:column}.prototype-label{bottom:7px;right:7px}.project-image{height:205px}}
+
+/* V25 EXECUTIVE DESIGN REFRESH — additive styles, original interactions preserved */
+:root{
+ --navy:#10263d;--navy2:#1b3b59;--gold:#c8a45d;--gold2:#ead8ad;
+ --ink:#1d2937;--muted:#667587;--line:#e2e7ed;--paper:#f5f7fa;
+ --shadow:0 18px 48px rgba(16,38,61,.11);--shadow-soft:0 8px 24px rgba(16,38,61,.065)
+}
+html{scroll-padding-top:104px}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;letter-spacing:0}
+::selection{background:rgba(200,164,93,.28);color:var(--navy)}
+a,button,input,select,textarea{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+ outline:3px solid rgba(200,164,93,.7);outline-offset:3px
+}
+.topline{background:linear-gradient(90deg,#0b1b2b,#18334d);border-bottom:1px solid rgba(200,164,93,.35)}
+.topline .container{padding-top:9px;padding-bottom:9px}
+header{box-shadow:0 6px 22px rgba(16,38,61,.055);background:rgba(255,255,255,.97)}
+.nav{min-height:88px;gap:18px}
+.brand{min-width:255px;gap:13px}
+.brand img{width:59px;height:59px;padding:3px;border:1px solid rgba(200,164,93,.32);border-radius:13px;background:#fff;box-shadow:0 3px 12px rgba(16,38,61,.06)}
+.brand strong{font-size:14px;letter-spacing:-.2px}
+.navlinks{gap:clamp(10px,1.25vw,19px);font-weight:600}
+.navlinks a{position:relative;padding:11px 0}
+.navlinks a:after{content:"";position:absolute;right:0;bottom:-2px;width:0;height:2px;background:var(--gold);transition:width .22s ease}
+.navlinks a:hover:after,.navlinks a:focus-visible:after{width:100%}
+.nav-cta,.btn{border-radius:10px;box-shadow:0 4px 10px rgba(16,38,61,.06);transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+.nav-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 9px 22px rgba(16,38,61,.13)}
+.employee-nav{background:var(--navy);border:1px solid rgba(200,164,93,.85);box-shadow:none}
+.employee-nav:hover{background:#244762}
+.hero{min-height:610px;background:#10263d}
+.hero:before{
+ background:
+  linear-gradient(270deg,rgba(9,24,39,.97) 0%,rgba(12,31,49,.88) 43%,rgba(12,31,49,.48) 100%),
+  url('assets/hero-bg.jpg') center 47%/cover;
+ transform:scale(1.01)
+}
+.hero:after{height:4px;background:linear-gradient(90deg,transparent,var(--gold),#f4e7c4,var(--gold),transparent)}
+.hero .container{position:relative}
+.hero-inner{max-width:820px;padding:76px 26px 78px 0;border-right:3px solid var(--gold);position:relative}
+.hero-inner:before{content:"";position:absolute;right:-11px;top:76px;width:17px;height:17px;border:1px solid var(--gold);background:var(--navy);transform:rotate(45deg)}
+.eyebrow{font-size:12px;letter-spacing:.7px;text-transform:uppercase}
+h1{font-size:clamp(35px,4.7vw,57px);line-height:1.34;letter-spacing:-1.2px;margin:21px 0 18px;text-wrap:balance}
+.hero p{font-size:16px;line-height:2.05;color:#e1e8ef;max-width:660px}
+.hero .btn{padding:13px 20px}
+.hero .btn:not(.btn-outline){background:linear-gradient(135deg,#e6d09d,#c8a45d)}
+.hero-note{gap:14px 24px;margin-top:31px}
+.hero-note span{font-size:12px;color:#dfe6ee}
+.trust-strip{position:relative;z-index:2;box-shadow:0 8px 28px rgba(16,38,61,.035)}
+.trust-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.trust-item{padding:25px 24px;gap:16px}
+.iconbox{border:1px solid rgba(200,164,93,.18);background:linear-gradient(145deg,#fbf7ed,#f2ead8);color:#8e6a28;border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+.section{padding:88px 0}
+.section.soft{background:linear-gradient(180deg,#f7f9fb 0%,#f2f5f8 100%);position:relative}
+.section.soft:before{content:"";position:absolute;top:0;right:0;left:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,164,93,.28),transparent)}
+.section-head{margin-bottom:36px;align-items:end}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.kicker:before{content:"";display:inline-block;width:24px;height:2px;background:var(--gold)}
+.section h2{font-size:clamp(27px,3.2vw,37px);letter-spacing:-.65px;margin:8px 0 12px;line-height:1.42}
+.section-head p{font-size:13px;line-height:1.95;max-width:760px}
+.audience-grid{gap:22px}
+.audience-card{border-radius:18px;padding:28px 27px 26px;box-shadow:0 6px 22px rgba(16,38,61,.035)}
+.audience-card:after{content:"";position:absolute;width:115px;height:115px;left:-48px;bottom:-52px;border:1px solid rgba(200,164,93,.13);border-radius:50%;pointer-events:none}
+.audience-card .iconbox{width:58px;height:58px;font-size:24px}
+.audience-card h3{font-size:18px;letter-spacing:-.25px}
+.audience-card p{font-size:13px;line-height:1.95;min-height:76px}
+.textlink{font-size:12px}
+.chip{padding:9px 15px;transition:all .18s ease}
+.chip.active,.chip:hover{box-shadow:0 5px 12px rgba(16,38,61,.12)}
+.search{border-radius:12px;box-shadow:0 3px 12px rgba(16,38,61,.025)}
+.project-grid{gap:22px}
+.project-card{border-radius:17px;box-shadow:0 5px 18px rgba(16,38,61,.035)}
+.project-image{height:205px;background:#dfe6ec}
+.project-image img{filter:saturate(.93);transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+.project-card:hover .project-image img{transform:scale(1.055);filter:saturate(1.06)}
+.project-image:after{inset:48% 0 0;background:linear-gradient(0deg,rgba(8,23,38,.76),transparent)}
+.project-status{border:1px solid rgba(255,255,255,.65);border-radius:7px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.project-body{padding:21px}
+.project-meta{letter-spacing:.1px}
+.project-body h3{font-size:18px;letter-spacing:-.25px}
+.project-body p{font-size:12.5px;line-height:1.95}
+.project-foot{padding-top:15px}
+.capability-grid{gap:54px}
+.capability-visual{min-height:440px;border-radius:20px;box-shadow:var(--shadow);border:1px solid rgba(200,164,93,.25)}
+.capability-visual:before{content:"";position:absolute;z-index:2;inset:14px;border:1px solid rgba(255,255,255,.45);border-radius:13px;pointer-events:none}
+.capability-visual img{transition:transform .7s ease}
+.capability-visual:hover img{transform:scale(1.035)}
+.visual-caption{right:32px;bottom:32px}
+.visual-caption strong{font-size:23px}
+.capability-copy p{font-size:14px;line-height:2}
+.checklist{gap:15px}
+.checklist li{font-size:13px;line-height:1.9}
+.leaders{gap:20px}
+.leader{border-radius:16px;padding:21px;gap:15px;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.leader:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft);border-color:rgba(200,164,93,.65)}
+.leader img{width:76px;height:84px;border:1px solid rgba(200,164,93,.28);border-radius:12px;object-position:center top}
+.leader strong{font-size:13px;line-height:1.8}
+.panel{border:1px solid var(--line);border-radius:18px!important;padding:25px!important;box-shadow:var(--shadow-soft);background:linear-gradient(135deg,#fff,#fbfcfd)}
+.contact-band{padding:48px 46px;border:1px solid rgba(200,164,93,.25);border-radius:22px;box-shadow:0 14px 36px rgba(16,38,61,.11);background:linear-gradient(115deg,#0c2033,#183a58)}
+.contact-band h2{font-size:clamp(24px,2.7vw,32px);letter-spacing:-.45px;line-height:1.45}
+.contact-band p{line-height:1.9;max-width:700px}
+.contact-band .btn{padding:14px 22px}
+.footer{background:linear-gradient(135deg,#091827,#102a42);border-top:3px solid var(--gold);padding-top:44px}
+.footer-brand img{padding:3px;border:1px solid rgba(200,164,93,.35)}
+.footer h4{color:var(--gold2);font-size:13px;margin-top:0}
+.footer-links a{transition:color .18s ease,transform .18s ease}
+.footer-links a:hover{color:var(--gold2);transform:translateX(-3px)}
+.copyright{border-top:1px solid rgba(255,255,255,.12);padding-top:17px}
+.modal{backdrop-filter:blur(6px);background:rgba(7,18,30,.68)}
+.modal-panel{border:1px solid rgba(200,164,93,.28);border-radius:20px;box-shadow:0 24px 70px rgba(0,0,0,.25)}
+.modal-head{background:linear-gradient(110deg,#10263d,#1b3b59);border-bottom:1px solid rgba(200,164,93,.32)}
+.modal-head h3{color:#fff}
+.close{border-radius:9px}
+.field input,.field select,.field textarea{border-radius:10px;transition:border-color .18s ease,box-shadow .18s ease}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,93,.14);outline:none}
+.toast{border:1px solid rgba(200,164,93,.3);box-shadow:var(--shadow)}
+/* Added editorial process section */
+.approach-section{position:relative;overflow:hidden}
+.approach-section:after{content:"";position:absolute;left:-100px;top:50px;width:290px;height:290px;border:1px solid rgba(200,164,93,.15);border-radius:50%;box-shadow:0 0 0 28px rgba(200,164,93,.035),0 0 0 58px rgba(200,164,93,.025);pointer-events:none}
+.approach-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;position:relative;z-index:1}
+.approach-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px 22px;min-height:195px;box-shadow:0 5px 18px rgba(16,38,61,.035);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.approach-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft);border-color:rgba(200,164,93,.7)}
+.approach-number{font-size:11px;letter-spacing:1.4px;color:#98722c;font-weight:800;display:flex;align-items:center;gap:10px}
+.approach-number:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(200,164,93,.6),transparent)}
+.approach-symbol{width:46px;height:46px;border-radius:13px;background:#f6f0e2;border:1px solid rgba(200,164,93,.25);display:grid;place-items:center;color:#8d6927;font-size:22px;margin:20px 0 13px}
+.approach-card h3{font-size:16px;color:var(--navy);margin:0 0 8px}
+.approach-card p{font-size:12px;color:var(--muted);line-height:1.9;margin:0}
+.prototype-label{border:1px solid rgba(200,164,93,.3);box-shadow:0 4px 16px rgba(16,38,61,.12)}
+#backToTop{position:fixed;z-index:45;left:22px;bottom:22px;width:46px;height:46px;border-radius:14px;background:var(--navy);color:#fff;border:1px solid rgba(200,164,93,.8);box-shadow:0 8px 20px rgba(16,38,61,.2);display:grid;place-items:center;font-size:20px;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease}
+#backToTop.visible{opacity:1;visibility:visible;transform:translateY(0)}
+@media(max-width:1050px){
+ .nav{gap:11px}.brand{min-width:220px}.brand strong{font-size:12px}.navlinks{gap:10px;font-size:12px}
+ .nav-cta,.btn{padding:10px 13px}.approach-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:780px){
+ .nav{min-height:74px}.brand{min-width:0;flex:1}.brand img{width:51px;height:51px}.nav-cta:not(.employee-nav){display:none}
+ .hero{min-height:560px}.hero-inner{padding:54px 19px 56px 0}.hero-inner:before{top:56px}
+ .hero p{font-size:15px}.section{padding:65px 0}.section-head{align-items:flex-start;flex-direction:column;gap:12px}
+ .trust-grid{grid-template-columns:1fr}.trust-item{border-left:0;border-bottom:1px solid var(--line);padding:17px 4px}.trust-item:last-child{border-bottom:0}
+ .audience-grid,.project-grid,.leaders{grid-template-columns:1fr}.audience-card p{min-height:0}
+ .capability-grid{grid-template-columns:1fr;gap:28px}.capability-visual{min-height:320px}
+ .contact-band{padding:31px 24px;align-items:flex-start;flex-direction:column}.contact-band .btn{align-self:flex-start}
+ .footer-main{grid-template-columns:1fr;gap:24px}.approach-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ .hero{min-height:540px}.hero-inner{padding-right:16px}h1{font-size:34px;letter-spacing:-.5px}
+ .hero-actions{align-items:stretch;flex-direction:column;max-width:280px}.hero-actions .btn{width:100%}
+ .hero-note{display:grid;gap:9px}.approach-grid{grid-template-columns:1fr}.approach-card{min-height:0}
+ .project-toolbar{align-items:stretch}.chips{gap:6px}.chip{padding:8px 10px}
+ #backToTop{left:14px;bottom:14px;width:42px;height:42px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -36,16 +190,44 @@
 </div><p style="font-size:11px;color:var(--muted);margin-top:18px">تنبيه: الصور المستخدمة في هذه النسخة للمعاينة البصرية. لا تُنسب إلى مشروع بعينه ولا تُعرض كدليل على تنفيذ أعمال محددة.</p>
 </div></section>
 <section class="section" id="capabilities"><div class="container capability-grid"><div class="capability-visual"><img src="assets/hero-bg.jpg" alt="مشهد توضيحي لمشروعات البنية التحتية"><div class="visual-caption"><strong>مجالات التنفيذ</strong><span>تُعرض التخصصات النهائية بناءً على بيانات الفرع المعتمدة</span></div></div><div class="capability-copy"><span class="kicker">قدرات الفرع</span><h2>معلومات واضحة تساعد على بناء شراكة مناسبة</h2><p>تخصص هذه المساحة لعرض مجالات العمل الفعلية، ونطاق التغطية الجغرافي، والخبرات والإمكانات التي يمكن توثيقها رسميًا.</p><ul class="checklist"><li><span class="check">✓</span><span>مشروعات مياه الشرب والصرف الصحي، متى كانت ضمن نطاق الأعمال المعتمد.</span></li><li><span class="check">✓</span><span>أعمال الشبكات والمرافق والبنية التحتية بحسب اختصاصات الفرع.</span></li><li><span class="check">✓</span><span>صور ومعلومات مشروعات يمكن ربطها ببيانات تنفيذ موثقة.</span></li><li><span class="check">✓</span><span>قنوات تواصل واضحة للجهات والموردين والمقاولين.</span></li></ul><button class="btn" data-open-modal="general">استفسر عن مجالات العمل ←</button></div></div></section>
+
+<section class="section approach-section" id="approach">
+ <div class="container">
+  <div class="section-head">
+   <div><span class="kicker">منهجية العمل</span><h2>من التخطيط إلى المتابعة</h2>
+   <p>عرض مختصر للمراحل العامة التي تساعد على تنظيم العمل وتنسيق الموارد ومتابعة التنفيذ. تُراجع التفاصيل النهائية وفق الإجراءات المعتمدة بالفرع.</p></div>
+  </div>
+  <div class="approach-grid">
+   <article class="approach-card"><div class="approach-number">01 <span>التخطيط</span></div><div class="approach-symbol" aria-hidden="true">⌖</div><h3>تحديد نطاق العمل</h3><p>توضيح نطاق الأعمال والمتطلبات والجدول المستهدف قبل بدء التنفيذ.</p></article>
+   <article class="approach-card"><div class="approach-number">02 <span>التجهيز</span></div><div class="approach-symbol" aria-hidden="true">▤</div><h3>تنسيق الموارد</h3><p>تنسيق الاحتياجات والمستندات والموارد اللازمة بالتعاون مع الإدارات المختصة.</p></article>
+   <article class="approach-card"><div class="approach-number">03 <span>التنفيذ</span></div><div class="approach-symbol" aria-hidden="true">⚒</div><h3>متابعة الأعمال</h3><p>متابعة الموقف التنفيذي ورصد المعوقات وتحديد الإجراءات المطلوبة لمعالجتها.</p></article>
+   <article class="approach-card"><div class="approach-number">04 <span>المراجعة</span></div><div class="approach-symbol" aria-hidden="true">✓</div><h3>التوثيق والتحسين</h3><p>تحديث بيانات المتابعة وتوثيق الملاحظات والدروس المستفادة وفق الإجراءات المعتمدة.</p></article>
+  </div>
+ </div>
+</section>
+
 <section class="section soft" id="leadership"><div class="container"><div class="section-head"><div><span class="kicker">قيادات الفرع</span><h2>القيادة والإدارة</h2><p>الأسماء والمسميات المعروضة مستندة إلى المعلومات التي سبق تحديدها للموقع، وتُراجع نهائيًا قبل النشر.</p></div></div><div class="leaders"><article class="leader"><img src="assets/saeed.jpg" alt="صورة م. سعيد فتوح عبد المولى"><div><strong>م. سعيد فتوح عبد المولى</strong><small>رئيس مجلس الإدارة والعضو المنتدب</small></div></article><article class="leader"><img src="assets/ahmed.jpg" alt="صورة المهندس أحمد السيد علي"><div><strong>المهندس أحمد السيد علي</strong><small>مدير فرع تنفيذ شمال الصعيد</small></div></article><article class="leader"><img src="assets/taher.jpg" alt="صورة طاهر إسماعيل محمد"><div><strong>طاهر إسماعيل محمد</strong><small>المدير المالي للفرع</small></div></article></div></div></section>
 <section class="section" id="employee-month"><div class="container"><div class="section-head"><div><span class="kicker">التقدير والتميز</span><h2>موظف الشهر</h2><p>مساحة لإبراز الإنجازات المهنية بعد اعتماد بيانات التكريم من إدارة الفرع.</p></div></div><div class="panel" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap"><div class="iconbox" style="width:68px;height:68px;font-size:30px">★</div><div style="flex:1;min-width:220px"><strong style="color:var(--navy);font-size:16px">سيتم نشر التكريم بعد اعتماده رسميًا</strong><p style="color:var(--muted);margin:6px 0 0;font-size:13px">لن تُعرض أسماء أو صور تجريبية باعتبارها تكريمًا فعليًا.</p></div><a class="btn btn-light" href="employee-portal.html">خدمات الموظفين</a></div></div></section>
 <section class="section soft" id="employee-services"><div class="container"><div class="contact-band"><div><span class="kicker" style="color:var(--gold2)">للعاملين بالفرع</span><h2>بوابة خدمات الموظفين</h2><p>الدخول إلى الخدمات الداخلية للموظفين وفق الحساب والصلاحيات المعتمدة. هذه النسخة تعرض نموذجًا تجريبيًا فقط.</p></div><a class="btn" href="employee-portal.html" target="_blank" rel="noopener noreferrer" aria-label="فتح بوابة خدمات الموظفين في تبويب مستقل">الدخول إلى البوابة ↗</a></div></div></section>
 <section class="section" id="contact"><div class="container"><div class="contact-band"><div><h2>هل ترغب في التواصل مع الفرع؟</h2><p>اختر موضوع التواصل وحدد البيانات الأساسية، وسيظهر لك تأكيد تجريبي داخل هذه النسخة.</p></div><button class="btn" data-open-modal="general">طلب تواصل أو موعد ←</button></div></div></section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-main"><div><div class="footer-brand"><img src="assets/logo.jpeg" alt="شعار الشركة"><div><strong>الشركة المساهمة المصرية للمقاولات (العبد)</strong><br><small>فرع تنفيذ شمال الصعيد</small></div></div><p>موقع تعريفي تجريبي لعرض الفرع ومشروعاته وقنوات التواصل المؤسسي. تُستكمل البيانات الرسمية قبل النشر.</p></div><div><h4>روابط سريعة</h4><div class="footer-links"><a href="#about">عن الفرع</a><a href="#projects">المشروعات والإنجازات</a><a href="#capabilities">مجالات التنفيذ</a><a href="#leadership">قيادات الفرع</a></div></div><div><h4>التواصل</h4><div class="footer-links"><a href="#contact">طلب تواصل أو موعد</a><a href="#contact">الجهات الحكومية</a><a href="#contact">الموردون والمقاولون</a><a href="employee-portal.html" target="_blank" rel="noopener noreferrer">بوابة خدمات الموظفين ↗</a></div><p>تضاف بيانات الهاتف والعنوان والبريد الرسمي بعد اعتمادها.</p></div></div><div class="copyright"><span>© الشركة المساهمة المصرية للمقاولات (العبد) — فرع تنفيذ شمال الصعيد</span><span>نسخة تجريبية للمراجعة — غير منشورة</span></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-main"><div><div class="footer-brand"><img src="assets/logo.jpeg" alt="شعار الشركة"><div><strong>الشركة المساهمة المصرية للمقاولات (العبد)</strong><br><small>فرع تنفيذ شمال الصعيد</small></div></div><p>موقع تعريفي تجريبي لعرض الفرع ومشروعاته وقنوات التواصل المؤسسي. تُستكمل البيانات الرسمية قبل النشر.</p></div><div><h4>روابط سريعة</h4><div class="footer-links"><a href="#about">عن الفرع</a><a href="#projects">المشروعات والإنجازات</a><a href="#capabilities">مجالات التنفيذ</a><a href="#approach">منهجية العمل</a><a href="#leadership">قيادات الفرع</a></div></div><div><h4>التواصل</h4><div class="footer-links"><a href="#contact">طلب تواصل أو موعد</a><a href="#contact">الجهات الحكومية</a><a href="#contact">الموردون والمقاولون</a><a href="employee-portal.html" target="_blank" rel="noopener noreferrer">بوابة خدمات الموظفين ↗</a></div><p>تضاف بيانات الهاتف والعنوان والبريد الرسمي بعد اعتمادها.</p></div></div><div class="copyright"><span>© الشركة المساهمة المصرية للمقاولات (العبد) — فرع تنفيذ شمال الصعيد</span><span>نسخة تجريبية للمراجعة — غير منشورة</span></div></div></footer>
 <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-panel"><div class="modal-head"><h3 id="modalTitle">طلب تواصل مع الفرع</h3><button class="close" id="closeModal" aria-label="إغلاق">×</button></div><div class="modal-content"><div class="success" id="successBox"></div><form id="contactForm"><div class="form-grid"><div class="field"><label for="visitorType">صفة الزائر *</label><select id="visitorType" required><option value="">اختر الصفة</option><option>جهة حكومية أو إدارية</option><option>مورد أو مقدم خدمة</option><option>مقاول أو شركة متخصصة</option><option>أخرى</option></select></div><div class="field"><label for="topic">موضوع التواصل *</label><select id="topic" required><option value="">اختر الموضوع</option><option>طلب اجتماع أو موعد</option><option>استفسار عن المشروعات</option><option>استفسار عن مجالات التنفيذ</option><option>توريدات أو خدمات</option><option>تعاون فني أو تعاقدي</option><option>موضوع آخر</option></select></div><div class="field"><label for="visitorName">الاسم *</label><input id="visitorName" required maxlength="100" placeholder="الاسم بالكامل"></div><div class="field"><label for="visitorPhone">رقم الهاتف *</label><input id="visitorPhone" required inputmode="tel" placeholder="مثال: 01012345678"></div><div class="field full"><label for="personToMeet">الشخص أو الإدارة المطلوب التواصل معها *</label><select id="personToMeet" required><option value="">اختر الجهة المختصة</option><option>رئيس مجلس الإدارة والعضو المنتدب</option><option>مدير فرع تنفيذ شمال الصعيد</option><option>المدير المالي للفرع</option><option>إدارة التخطيط والمتابعة</option><option>إدارة الموارد البشرية</option><option>إدارة المخازن</option><option>إدارة أخرى</option></select></div><div class="field"><label for="preferredDate">التاريخ المقترح (اختياري)</label><input id="preferredDate" type="date"></div><div class="field"><label for="preferredTime">الوقت المقترح (اختياري)</label><select id="preferredTime"><option value="">غير محدد</option><option>09:00–11:00</option><option>11:00–13:00</option><option>13:00–15:00</option></select></div><div class="field full"><label for="details">تفاصيل إضافية (اختياري)</label><textarea id="details" maxlength="1000" placeholder="اكتب موضوع التواصل باختصار"></textarea></div></div><p class="form-note">هذا نموذج تجريبي. عند الإرسال، تُحفظ البيانات محليًا في هذا المتصفح فقط، ولا تصل إلى الفرع ولا يتم حجز موعد فعلي.</p><div class="modal-actions"><button type="submit" class="btn">إرسال الطلب التجريبي</button><button type="button" class="btn btn-light" id="cancelModal">إلغاء</button></div></form></div></div></div>
 <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle"><div class="modal-panel"><div class="modal-head"><h3 id="projectModalTitle">تفاصيل المشروع</h3><button class="close" id="closeProjectModal" aria-label="إغلاق">×</button></div><div class="modal-content"><p id="projectModalText">تفاصيل المشروع</p><div class="success" style="display:block">هذه بطاقة توضيحية. تُستكمل بيانات المحافظة والجهة المالكة ونطاق الأعمال والموقف التنفيذي من مصادر الفرع المعتمدة.</div><button class="btn" data-open-modal="general" id="askProject">استفسار عن المشروع ←</button></div></div></div>
-<div class="toast" id="toast" role="status"></div><div class="prototype-label">نموذج تجريبي — لا يرسل بيانات للخارج</div>
+<div class="toast" id="toast" role="status"></div><button id="backToTop" type="button" aria-label="العودة إلى أعلى الصفحة" title="العودة إلى الأعلى">↑</button><div class="prototype-label">نموذج تجريبي — لا يرسل بيانات للخارج</div>
 <script>
 (()=>{const $=s=>document.querySelector(s),$$=s=>Array.from(document.querySelectorAll(s));const modal=$('#contactModal'),projectModal=$('#projectModal'),form=$('#contactForm'),success=$('#successBox');let currentFilter='all';function openContact(type){projectModal.classList.remove('open');modal.classList.add('open');form.reset();form.querySelectorAll('input,select,textarea,button[type=submit]').forEach(el=>el.disabled=false);$('.modal-actions button[data-reset-request]')?.remove();success.style.display='none';if(type==='government'){$('#visitorType').value='جهة حكومية أو إدارية';$('#topic').value='طلب اجتماع أو موعد'}else if(type==='supplier'){$('#visitorType').value='مورد أو مقدم خدمة';$('#topic').value='توريدات أو خدمات'}else if(type==='contractor'){$('#visitorType').value='مقاول أو شركة متخصصة';$('#topic').value='تعاون فني أو تعاقدي'}else{$('#visitorType').value='';$('#topic').value=''}setTimeout(()=>$('#visitorName').focus(),80)}function closeContact(){modal.classList.remove('open')}$$('[data-open-modal]').forEach(b=>b.addEventListener('click',()=>openContact(b.dataset.openModal)));$('#closeModal').addEventListener('click',closeContact);$('#cancelModal').addEventListener('click',closeContact);modal.addEventListener('click',e=>{if(e.target===modal)closeContact()});$('#closeProjectModal').addEventListener('click',()=>projectModal.classList.remove('open'));projectModal.addEventListener('click',e=>{if(e.target===projectModal)projectModal.classList.remove('open')});$('#askProject').addEventListener('click',()=>openContact('general'));function applyFilters(){const q=$('#projectSearch').value.trim().toLowerCase();let count=0;$$('.project-card').forEach(card=>{const cats=card.dataset.category.split(' '),txt=(card.dataset.search+' '+card.innerText).toLowerCase();const ok=(currentFilter==='all'||cats.includes(currentFilter))&&(!q||txt.includes(q));card.style.display=ok?'flex':'none';if(ok)count++});$('#emptyProjects').style.display=count?'none':'block'}$$('#projectFilters .chip').forEach(btn=>btn.addEventListener('click',()=>{$$('#projectFilters .chip').forEach(x=>x.classList.remove('active'));btn.classList.add('active');currentFilter=btn.dataset.filter;applyFilters()}));$('#projectSearch').addEventListener('input',applyFilters);$$('[data-project]').forEach(btn=>btn.addEventListener('click',()=>{$('#projectModalTitle').textContent=btn.dataset.project;$('#projectModalText').textContent='بطاقة '+btn.dataset.project+' — تعرض النسخة النهائية وصف نطاق الأعمال، المحافظة، الجهة المالكة، حالة التنفيذ، والصور المعتمدة بعد استكمال البيانات الرسمية.';projectModal.classList.add('open')}));$('#mobileToggle').addEventListener('click',()=>$('#navlinks').classList.toggle('show'));$$('#navlinks a').forEach(a=>a.addEventListener('click',()=>$('#navlinks').classList.remove('show')));const today=new Date();$('#preferredDate').min=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;form.addEventListener('submit',e=>{e.preventDefault();const phone=$('#visitorPhone').value.trim().replace(/[\s-]/g,'');if(!/^(?:\+?20|0)?1[0125][0-9]{8}$/.test(phone)){alert('من فضلك أدخل رقم هاتف مصري صحيحًا.');$('#visitorPhone').focus();return}const now=new Date(),ref='APT-'+now.getFullYear()+'-'+String(Date.now()).slice(-6);const req={id:ref,ref,type:$('#visitorType').value,person:$('#personToMeet').value,reason:$('#topic').value,name:$('#visitorName').value.trim(),phone,date:$('#preferredDate').value,time:$('#preferredTime').value,details:$('#details').value.trim(),status:'new',createdAt:now.toISOString(),source:'public-demo',history:[{status:'new',at:now.toISOString(),note:'تم تسجيل الطلب في النموذج التجريبي'}]};let items=[];try{items=JSON.parse(localStorage.getItem('northUpperAppointmentsV1')||'[]')}catch(_){}items.unshift(req);try{localStorage.setItem('northUpperAppointmentsV1',JSON.stringify(items))}catch(_){}success.textContent='تم تسجيل الطلب التجريبي برقم '+req.ref+' في هذا المتصفح فقط. لم يتم إرساله إلى الفرع ولم يتم حجز موعد.';success.style.display='block';form.querySelectorAll('input,select,textarea,button[type=submit]').forEach(el=>el.disabled=true);const reset=document.createElement('button');reset.dataset.resetRequest='1';reset.className='btn btn-light';reset.type='button';reset.textContent='طلب جديد';reset.style.marginRight='8px';reset.onclick=()=>{form.reset();form.querySelectorAll('input,select,textarea,button[type=submit]').forEach(el=>el.disabled=false);success.style.display='none';reset.remove()};$('.modal-actions').appendChild(reset)});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeContact();projectModal.classList.remove('open')}});})();
 </script>
+
+<script>
+(()=> {
+ const btn=document.getElementById('backToTop');
+ if(!btn) return;
+ const update=()=>btn.classList.toggle('visible',window.scrollY>520);
+ window.addEventListener('scroll',update,{passive:true});
+ btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+ update();
+})();
+</script>
+
 </body></html>
